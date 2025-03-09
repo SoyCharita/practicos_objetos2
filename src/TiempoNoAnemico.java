@@ -20,11 +20,11 @@ public class TiempoNoAnemico {
         return darFormato(PATRON_FECHA_LARGO);
     }
 
-    public String darFormato (String unPatron) {
-        return fechaHoy.format(obtenerFormateador(unPatron));
+    private String darFormato (String unPatron) {
+        return this.fechaHoy.format(obtenerFormateador(unPatron));
     }
 
-    public DateTimeFormatter obtenerFormateador(String unPatron) {
+    private DateTimeFormatter obtenerFormateador(String unPatron) {
         return DateTimeFormatter.ofPattern(unPatron);
     }
 
@@ -32,12 +32,7 @@ public class TiempoNoAnemico {
         return LocalDateTime.now();
     }
 
-    public LocalDateTime obtenerTiempoHoy () {
-        return actualizarTiempo();
-    }
-
-
-    //----------------------------- CONSTRUCTORES -----------------------------
+     //----------------------------- CONSTRUCTORES -----------------------------
 
     public TiempoNoAnemico() {
         fechaHoy = actualizarTiempo();
