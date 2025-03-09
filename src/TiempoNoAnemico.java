@@ -35,6 +35,6 @@ public class TiempoNoAnemico {
      //----------------------------- CONSTRUCTORES -----------------------------
 
     public TiempoNoAnemico() {
-        fechaHoy = actualizarTiempo();
+        this.fechaHoy = actualizarTiempo();
     }
 }
